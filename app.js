@@ -18,7 +18,6 @@ app.use(bodyParser.json())
 //Public
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //rotas abaixo
 {/*
         app.use(express.static('public'))
@@ -50,18 +49,18 @@ app.get('/', (req, res)=>{
     res.send('rota principal')
 })
 
-
-app.use('/home', admin)
+app.use('/', admin)
 
 
 app.post('/add', (req, res)=>{
     Post.create({
-        titulo: req.body.titulo,
-        conteudo: req.body.conteudo
+        nome: req.body.nome,
+        email: req.body.email,
+        mensagem: req.body.mensagem
     }).then(()=>{
-        res.send('Post criado com sucesso!')
+        res.render('index')
     }).catch((erro)=>{
-        res.send('Houve um erro: ' + erro)
+        res.send('Ocorreu um erro: ' + erro)
     })
 
 })

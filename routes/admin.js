@@ -11,8 +11,8 @@ router.get('/home', (req, res)=>{
     res.render('index')
 })
 
-router.get('/formulario', (req, res)=>{
-    res.render('formulario')
+router.get('/contato', (req, res)=>{
+    res.render('contato')
 })
 
 router.get('/conhecimento', (req, res)=>{
