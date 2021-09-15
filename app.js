@@ -4,7 +4,8 @@ const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Orcamento =  require('./model/db/Orcamento')
 const Post = require('./model/db/Post')
-
+const admin = require('./routes/admin')
+const path = require('path')
 
 //config handlebars
 app.engine('handlebars', handlebars({defaultLayout: 'main'}))
@@ -14,31 +15,43 @@ app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-//rotas
-app.use(express.static('public'))
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/layouts')
+//Public
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+//rotas abaixo
+{/*
+        app.use(express.static('public'))
+        app.get('/', (req, res) => {
+            res.sendFile(__dirname + '/views/layouts')
+        })
+
+        app.get('/home', (req, res)=>{
+            res.render('index')
+        })
+
+        app.get('/formulario', (req, res)=>{
+            res.render('formulario')
+        })
+
+        app.get('/conhecimento', (req, res)=>{
+            res.render('conhecimento')
+        })
+
+        app.get('/projetos', (req, res)=>{
+            res.render('projetos')
+        })
+
+        app.get('/orcamento', (req, res)=>{
+            res.render('orcamento')
+        })
+    */}
+app.get('/', (req, res)=>{
+    res.send('rota principal')
 })
 
-app.get('/home', (req, res)=>{
-    res.render('index')
-})
 
-app.get('/cad', (req, res)=>{
-    res.render('formulario')
-})
-
-app.get('/#conhecimento', (req, res)=>{
-    res.render('conhecimento')
-})
-
-app.get('/projetos', (req, res)=>{
-    res.render('projetos')
-})
-
-app.get('/orcamento', (req, res)=>{
-    res.render('orcamento')
-})
+app.use('/home', admin)
 
 
 app.post('/add', (req, res)=>{
