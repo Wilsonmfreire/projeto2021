@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/public/css/teste.css">
+    <!--link p/icon manifest-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <title>Portifólio Wilson Freire</title>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>fechar</span>
+        </div>
+
+        <header id="home">
+            <div class="img-wrapper">
+                <img src="img/bg.jpg" alt="">
+            </div>
+            <div class="banner">
+                <h1>Web Developer & Front End <br>Designer</h1>
+                <p>Wilson Morais Freire</p>
+                <button>Saiba mais</button>
+            </div>
+        </header>
+
+        <div class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/wilson-freire/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Wilsonmfreire"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+<!--
+    section.sessao-conhecimento>(.sessao-header>h1)+.conhecimentos>(.conhecimento>(.conhecimento.header>i.fab+3).conhecimento-text>p{lorem30})*6
+-->
+        <section class="sessao-conhecimento" id="conhecimentos">
+            <div class="sessao-header">
+                <h1>Conhecimentos</h1>
+            </div>
+            <div class="conhecimentos">
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="icon-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>HTML semântico, deixar o site com suas informações bem explicadas e compreensíveis para o computador, ajudando até mesmo em sua busca no Google e facilitando o entendimento de leitores de acessibilidade.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="icon-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Cascading Style Sheets. Criar efeitos de transição, imagem, imagem de fundo/background e outros, imaginando e treinando diversos aspectos de design no layout da página.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Design</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Experiência comprovada em carteira com trabalhos na onde utilizei Photoshop, o Illustrator e o InDesign. Mente criativa e desafiadora para novos desafios, cursando figma no momento </p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="icon-javascript-alt"></i>
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p> Lógica de programação e algorítmo utilizando Javascript em problemas reais, desenvolvendo códigos com base em exemplos práticos, onde o foco é desenvolver habilidades em lógica de programação.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="icon-mssql"></i>
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Proficiente em comandos básicos como:</br> CREATE, DELETE, INSERT, UPDATE. Experiência compravada em contrato na onde era responsável por entregar relatorios a área administrativa. </p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="icon-git"></i>
+                        <h3>Git</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Conhecimentos básicos como git ls, add, status, commit, reset, merge, pull e push. </br>Projetos em startups e pessoais fazendo alterações simples e usando alguns dos comandos citados a cima. </p>
+                    </div>
+                </div>
+                <div class="conhecimento-img-wrapper">
+                    <img src="img/conhecimentos.png" alt="imagem conhecimento">
+                </div>
+            </div>
+        </section>
+        <section class="sessao-projetos" id="projetos">
+            <div class="sessao-header">
+                <h1>Projetos</h1>
+            </div>
+<!--.projetos>.card>(.card-img-wrapper+.card-info>h2+h3+p+button)*3-->
+            <div class="projetos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj1.jpg" alt="imagem do projeto ToDo">
+                    </div>
+                    <div class="card-info">
+                        <h2>Todo List</h2>
+                        <h3>Formulários</h3>
+                        <p>Modelos para formulários, criados com JS e suas validações simples.</p>
+                        <a href="https://github.com/Wilsonmfreire/ProjetosHTML-CSS/tree/main/Formul%C3%A1rios"><button class="btn" >Saiba Mais </button> </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj2.jpg" alt="imagem do projeto Maratona">
+                    </div>
+                    <div class="card-info">
+                        <h2>NetFlix</h2>
+                        <h3>HTML, CSS</h3>
+                        <p>Um dos projeto academicos feito em bootcamp com mais de oito horas.</p>
+                        <a href="https://github.com/Wilsonmfreire/ProjetosHTML-CSS/tree/main/NetFlix-clone"><button class="btn" >Saiba Mais </button> </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="img/proj3.jpg" alt="imagem do projeto Casa Beta">
+                    </div>
+                    <div class="card-info">
+                        <h2>PetShop</h2>
+                        <h3>HTML</h3>
+                        <p>Primeiro Projeto feito junto com o curso de Full Stack da Digital House</p>
+                        <a href="https://github.com/Wilsonmfreire/ProjetosHTML-CSS/tree/main/petshop-front"><button class="btn" >Saiba Mais </button> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sessao-contato" id="contato">
+            <div class="contato-wrapper">
+                <div class="contato-left"></div>
+                <div class="contato-rigth">
+                    <h1>Contato</h1>
+                    <form action="" method="POST">
+                        <div class="input-group">
+                            <input  type="text" name="nome" class="field" id="nome">
+                            <label for="nome" class="field-label">Nome</label>
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <input required type="text" class="field" id="email">
+                            <label for="email" class="field-label">Email</label>
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-group">
+                            <textarea class="field" id="mensagem"></textarea>
+                            <label for="mensagem" class="field-label">Mensagem</label>
+                        </div>
+                        <button class="btn btn-submit" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="sessao-orcamento" id="orcamento">
+            <div class="orcamento-wrapper">
+                <h1>Faça um Orçamento</h1>
+                <form action="//add" method="POST">
+                    <label for="qtde">Qtde de Páginas</label>
+                    <input type="number" min="1" name="qtde" id="qtde">
+                    <label for="js">Precisa de um script Js</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <label for="layout-sim">Preciso de um Layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-nao">
+                            <label for="layout-nao">Já tenho um Layout</label>
+                        </div>
+                    </div>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <label id="preco">R$ 0,00</label>
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <p>
+                    copyright &copy; 2021, WMF - Todos os direitos reservados
+                </p>
+                <div class="social-list">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <a href="#home" id="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    
+</body>
+<script src="/script.js"></script>
+</html>
